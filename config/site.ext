@@ -1,0 +1,15 @@
+# Extensões do certificado do SITE (assinado pela intermediária)
+#
+# Quem decide as extensões é a AC, não quem pediu o certificado:
+# o CSR leva só a chave pública e o nome; a AC confere e acrescenta o resto.
+#
+# CA:FALSE = este certificado NÃO pode assinar outros certificados.
+basicConstraints       = critical, CA:FALSE
+# A chave do site serve para assinar o handshake TLS.
+keyUsage               = critical, digitalSignature
+# Uso estendido: autenticar um servidor web (serverAuth).
+extendedKeyUsage       = serverAuth
+# Nomes para os quais o certificado vale. O navegador confere ESTE campo, não o CN.
+subjectAltName         = DNS:agenda.caisazul.test
+subjectKeyIdentifier   = hash
+authorityKeyIdentifier = keyid:always, issuer

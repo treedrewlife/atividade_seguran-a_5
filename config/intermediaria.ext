@@ -1,0 +1,8 @@
+# Extensões da AC INTERMEDIÁRIA (assinada pela raiz)
+#
+# pathlen:0 = pode assinar certificados de sites, mas não pode criar outra AC abaixo dela.
+basicConstraints       = critical, CA:TRUE, pathlen:0
+keyUsage               = critical, keyCertSign, cRLSign
+subjectKeyIdentifier   = hash
+# Aponta para a chave de quem assinou este certificado (a raiz).
+authorityKeyIdentifier = keyid:always, issuer

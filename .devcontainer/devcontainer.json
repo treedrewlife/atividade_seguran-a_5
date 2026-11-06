@@ -1,0 +1,25 @@
+{
+  // Ambiente do laboratório no GitHub Codespaces.
+  // O Codespace é uma máquina Linux na nuvem: o aluno usa só o navegador
+  // e não precisa de acesso administrativo ao computador do laboratório.
+  "name": "Lab — AC da turma (certificados e .pfx)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "hostRequirements": {
+    "cpus": 2
+  },
+  "postCreateCommand": "bash .devcontainer/pos-criacao.sh",
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    },
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.cwd": "${workspaceFolder}/trabalho",
+        "markdown.preview.breaks": true
+      }
+    }
+  }
+}

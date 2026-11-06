@@ -1,0 +1,16 @@
+# ------------------------------------------------------------------
+# SEGREDOS: nunca versionar.
+# Uma chave privada ou um .pfx no Git fica no histórico para sempre,
+# mesmo que o arquivo seja apagado depois.
+# ------------------------------------------------------------------
+*.key
+*.pfx
+*.p12
+
+# Arquivos auxiliares do OpenSSL
+*.srl
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
